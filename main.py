@@ -26,7 +26,7 @@ class Instagram:
         time.sleep(4)
         dm = driver.find_element_by_xpath("/html/body/div[1]/section/nav/div[2]/div/div/div[3]/div/div[2]/a")
         dm.click()
-        not_now = driver.find_element_by_xpath("/html/body/div[4]/div/div/div/div[3]/button[2]")
+        
 
 if __name__ == "__main__":
     ig = Instagram("tyrone.tong", "(Tong800000)")
