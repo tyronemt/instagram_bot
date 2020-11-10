@@ -17,12 +17,14 @@ class Instagram:
     def login(self):
         driver = self.driver
         driver.get('https://www.instagram.com/')
-        time.sleep(2)
-        #"//input[@name='username']"
-        #"//input[@name='password']"
+        time.sleep(5)
+        u = driver.find_element_by_xpath("//input[@name='username']")
+        u.send_keys(self.username)
+        p = driver.find_element_by_xpath("//input[@name='password']")
+        p.send_keys(self.password)
+        p.send_keys(Keys.RETURN)
 
 
 if __name__ == "__main__":
-    # ig = Instagram("tyrone.tong", "(Tong800000)")
-    driver = webdriver.Firefox(executable_path="geckodriver")
-    driver.get('https://www.instagram.com/')
+    ig = Instagram("tyrone.tong", "(Tong800000)")
+    ig.login()
